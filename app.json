@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "LOS – League of Singles",
+    "slug": "los-league-of-singles",
+    "version": "1.0.0",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "los",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "privacy": "unlisted",
+    "splash": {
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#EEF6FF"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.los.leagueofsingles",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "LOS uses your location to show nearby basketball courts.",
+        "NSCameraUsageDescription": "LOS uses your camera for profile photos.",
+        "NSPhotoLibraryUsageDescription": "LOS uses your photo library for profile photos."
+      }
+    },
+    "android": {
+      "package": "com.los.leagueofsingles",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#2563EB"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      ["expo-router", { "origin": "https://replit.com/" }],
+      "expo-font",
+      "expo-web-browser",
+      ["expo-location", { "locationWhenInUsePermission": "LOS uses your location to show nearby basketball courts." }],
+      ["expo-image-picker", { "photosPermission": "LOS uses your photo library for your profile picture.", "cameraPermission": "LOS uses your camera for your profile picture." }]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "los-league-of-singles"
+      }
+    }
+  }
+}
